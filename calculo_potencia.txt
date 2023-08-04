@@ -1,0 +1,40 @@
+https://onlinegdb.com/yBUjYIjV1
+
+/******************************************************************************
+
+Elaborar um programa que apresente como resultado o valor de uma potência de uma base qualquer elevada a um expoente qualquer, 
+ou seja, de B elevado a E, em que B é o valor da base e E o valor do expoente. 
+Considere apenas a entrada de valores inteiros e positivos.
+
+*******************************************************************************/
+#include <stdio.h>
+#include <math.h>
+
+int main()
+{
+    int base;
+    int expoente;
+    double potencia;
+    
+    printf("Digite um número inteiro e positivo para uma base qualquer: ");
+    scanf("%d", &base);
+    
+    if(base <= 0) {
+        printf("A base precisa ser um número inteiro e positivo!\n");
+        return 1;
+    }
+    
+    printf("Digite um número inteiro e positivo para um expoente qualquer:");
+    scanf("%d", &expoente);
+    
+    if(expoente < 0) {
+        printf("O expoente precisa ser um número inteiro e positivo!\n");
+        return 1;
+    }
+    
+   potencia = pow(base, expoente);
+    
+    printf("O resultado potência com a base %d elevada ao expoente %d é: %.0lf", base, expoente, potencia);
+
+    return 0;
+}
